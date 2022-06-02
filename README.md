@@ -1,1 +1,0 @@
-# Cyclistic-SQLServer-PowerBI
