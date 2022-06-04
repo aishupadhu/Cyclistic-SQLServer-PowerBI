@@ -74,7 +74,7 @@ This chart below, shows the ride count by day of the week of the day. During the
 
 This chart below, shows how ridership varies across months and quarters between casual riders and members. Casual ridership seems to peak during the summer months while dropping off significantly in winter. While members' ridership drops off during winter as well, the drop is not as steep as for casual riders.
 
-<img src="/sqlimage/Casual%20and%20member%20riders%20by%20month.png" />
+<img src="/sqlimage/Casual%20and%20member%20riders%20by%20month%20.png" />
 
 The charts below ride length and count by origination location and user type. While the service seems to cover quite a large area, most of the activity seems to be focused in a handful of zip codes like 60610, 60611, 60614, 60654 and 60657. It can also be observed that while casual users overall seem to take fewer rides than members, casual users have longer ride durations.
 
