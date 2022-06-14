@@ -1,6 +1,7 @@
 # Cyclistic-SQLServer-PowerBI
 Data Analysis case study of a bike sharing company (using SQL and Power BI)
-Scenario
+
+## Scenario
 Cyclistic is a US based bike sharing company operating mainly in the Chicago, IL area. Riders can be Members (those who pay annual subscriptions are members) or Casual. The company believes that maximizing annual subscriptions is key to driving future growth. The data analyst team in Cyclistic has been tasked with analyzing historical ride data to identify how members and casual riders use the service differently. The Google Data Analytics approach has been adopted for this case study. This process breaks down a data analytics task into 6 steps:
 
 Ask
@@ -11,10 +12,10 @@ Share
 Act
 The sections below correspond to each of these 6 steps.
 
-##Step 1: Ask - Understanding the Business Task
+## Step 1: Ask - Understanding the Business Task
 As part of this data analysis task, Cyclistic leadership would like to understand how members and casual riders use the service differently based on ride data for the past 12 months. Based on this analysis, a data-driven marketing strategy will be developed and deployed.
 
-##Step 2: Prepare - Acquiring the Input Data Elements
+## Step 2: Prepare - Acquiring the Input Data Elements
 The dataset used is a public dataset located at https://divvy-tripdata.s3.amazonaws.com/index.html. It is provided by Motivate International Inc., under this license - https://www.divvybikes.com/data-license-agreement as a part of the Google Data Analytics Certificate program. 12 months of data was used for the analysis from May 2021 to April 2022.
 
 The dataset provides details of rides that users took in these 12 months and contains the following fields:
@@ -34,7 +35,7 @@ end_lng - Contains the longitude where the ride ended. This field was not used i
 member_casual - Indicates whether the rider was a member paying an annual subscription or a casual rider.
 Since there is no rider information provided in this dataset, it is not possible to analyze behavior of individual riders, which would have provided further valuable insight for this analysis.
 
-##Step 3: Process - Data Cleansing and Processing
+## Step 3: Process - Data Cleansing and Processing
  Microsoft SQL Server was used for data cleansing and processing.
 
 The dataset is in the form of 12 CSV files, each containing ride data from May 2021 to April 2022. There are over 5 million records combined and R is a good choice to handle this volume. The following steps were performed as part of processing and preparing the dataset for visualizations.
@@ -43,7 +44,7 @@ The dataset is in the form of 12 CSV files, each containing ride data from May 2
 
 
 
-Data Cleansing
+### Data Cleansing
 Fields not used in the analysis were dropped (to improve processing performance).
 Any leading and trailing white spaces were removed in all fields.
 140 invalid records were found and removed where the end time was prior to the start time.
@@ -52,7 +53,7 @@ Duplicate values were checked for based on the "ride_id" field, but none were de
 <img src="/sqlimage/Data%20Cleaning.png" />
 
 
-Data Processing
+### Data Processing
 The following new fields were added to the dataset to be used in the visualizations:
 "day_week_start_trip" - contains the day of the week on which the trip started (eg: Sunday, Monday etc.).
 "ride_length_hours" - contains the the ride length in hours rounded to 2 decimal places (eg: 1.23).
